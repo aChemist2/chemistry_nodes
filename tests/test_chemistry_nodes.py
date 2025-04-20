@@ -25,6 +25,7 @@ def test_return_types():
         "STRING",
         "STRING",
         "STRING",
+        "STRING",
     )
     assert BooruTags.FUNCTION == "get_tags_from_id"
     assert BooruTags.CATEGORY == "Chemistry Nodes"
