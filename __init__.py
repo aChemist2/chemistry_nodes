@@ -10,7 +10,16 @@ __author__ = """TheWierdChemist"""
 __email__ = "you@gmail.com"
 __version__ = "0.0.1"
 
-from .src.chemistry_nodes.nodes import NODE_CLASS_MAPPINGS
-from .src.chemistry_nodes.nodes import NODE_DISPLAY_NAME_MAPPINGS
+from .src.chemistry_nodes.danbooru import BooruTags
+
+NODE_CLASS_MAPPINGS = {
+    "Booru Tags from ID": BooruTags,
+}
+
+NODE_DISPLAY_NAMES_MAPPINGS = {
+    "Booru Tags from ID": "Booru Tags from ID",
+}
 
 WEB_DIRECTORY = "./web"
+
+print("--> chemistry_nodes loaded")

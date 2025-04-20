@@ -3,19 +3,29 @@
 """Tests for `chemistry_nodes` package."""
 
 import pytest
-from src.chemistry_nodes.nodes import Example
+from src.chemistry_nodes.danbooru import BooruTags
+from src.chemistry_nodes.tag import Tag, TagCollection, Prompt
+
 
 @pytest.fixture
-def example_node():
+def boorutags_node():
     """Fixture to create an Example node instance."""
-    return Example()
+    return BooruTags()
 
-def test_example_node_initialization(example_node):
+
+def test_boorutags_node_initialization(boorutags_node):
     """Test that the node can be instantiated."""
-    assert isinstance(example_node, Example)
+    assert isinstance(boorutags_node, BooruTags)
+
 
 def test_return_types():
     """Test the node's metadata."""
-    assert Example.RETURN_TYPES == ("IMAGE",)
-    assert Example.FUNCTION == "test"
-    assert Example.CATEGORY == "Example"
+    assert BooruTags.RETURN_TYPES == (
+        "STRING",
+        "STRING",
+        "STRING",
+        "STRING",
+        "STRING",
+    )
+    assert BooruTags.FUNCTION == "get_tags_from_id"
+    assert BooruTags.CATEGORY == "Chemistry Nodes"
