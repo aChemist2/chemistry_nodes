@@ -4,7 +4,6 @@
 
 import pytest
 from src.chemistry_nodes.danbooru import BooruTags
-from src.chemistry_nodes.tag import Tag, TagCollection, Prompt
 
 
 @pytest.fixture
